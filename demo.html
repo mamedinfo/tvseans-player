@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="tVideo"></div>
+    <!-- <script src="./src/jwplayer.core.controls.js"></script> -->
+    <!-- <script src="./src/jwpsrv.js"></script> -->
+    <!-- <script src="./src/provider.hlsjs.js"></script> -->
+    <script src="./player.js"></script>
+    <script>
+      var player = jwplayer("tVideo");
+      player.setup({
+        displaytitle: false,
+        logo: { hide: true },
+        autostart: false,
+        file: "https://tvseans.az/az/hls/3196/0/index.m3u8",
+        width: "500px",
+        aspectratio: "16:9"
+      });
+    </script>
+  </body>
+</html>
