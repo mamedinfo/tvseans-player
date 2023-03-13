@@ -3808,7 +3808,7 @@
             return "";
           },
           s = function () {
-            return "https://cdn.jsdelivr.net/gh/mamedinfo/tvseans-player/src/";
+            return "https://cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.1/src/";
             // return `${(0, i.isFileProtocol)() ? "https:" : ""}${e}`;
           },
           a = function (e) {
@@ -5205,7 +5205,7 @@
             const t = "file:" === window.location.protocol ? "https:" : "",
               n = {
                 bidding: "//ssl.p.jwpcdn.com/player/v/8.26.8/bidding.js",
-                jwpsrv: "https://cdn.jsdelivr.net/gh/mamedinfo/tvseans-player/src/jwpsrv.js",
+                jwpsrv: "https://cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.1/src/jwpsrv.js",
                 dai: "//ssl.p.jwpcdn.com/player/v/8.26.8/dai.js",
                 vast: "//ssl.p.jwpcdn.com/player/v/8.26.8/vast.js",
                 googima: "//ssl.p.jwpcdn.com/player/v/8.26.8/googima.js",
