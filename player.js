@@ -553,7 +553,9 @@
                 r = new S.ZP(t.key),
                 i = 7776e6;
               if (n > 0 && n < 4 && e && r.duration() > -i) {
-                return new b.ZP(`//cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.2/player.js`)
+                return new b.ZP(
+                  `//cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.3/player.js`
+                )
                   .load()
                   .then(() => {
                     const e = window.jwplayer.defaults.key,
@@ -1020,7 +1022,7 @@
           E = "technicalError";
         class T {
           constructor(e, t, n) {
-            console.log(e,t,n);
+            console.log(e, t, n);
             (this.code = (0, r.qh)(t) ? t : 0),
               (this.sourceError = n || null),
               e ? (this.key = e) : delete this.key;
@@ -1036,7 +1038,7 @@
           }
         }
         const A = function (e, t, n) {
-            console.log("A",n);
+            console.log("A", n);
             return n instanceof T && n.code ? n : new T(e, t, n);
           },
           Z = function (e, t) {
@@ -1045,7 +1047,6 @@
             return (n.code = ((e && e instanceof T && e.code) || 0) + t), n;
           },
           _ = function (e) {
-        
             const { name: t, message: n } = e;
             switch (t) {
               case "AbortError":
@@ -3812,7 +3813,7 @@
             return "";
           },
           s = function () {
-            return "//cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.2/src/";
+            return "//cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.3/src/";
             // return `${(0, i.isFileProtocol)() ? "https:" : ""}${e}`;
           },
           a = function (e) {
@@ -5208,15 +5209,20 @@
           v = (e) => {
             const t = "file:" === window.location.protocol ? "https:" : "",
               n = {
-                bidding: "//ssl.p.jwpcdn.com/player/v/8.26.8/bidding.js",
+                bidding:
+                  "//cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.3/src/bidding.js",
                 jwpsrv:
-                  "//cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.2/src/jwpsrv.js",
-                dai: "//ssl.p.jwpcdn.com/player/v/8.26.8/dai.js",
-                vast: "//ssl.p.jwpcdn.com/player/v/8.26.8/vast.js",
-                googima: "//ssl.p.jwpcdn.com/player/v/8.26.8/googima.js",
-                freewheel: "//ssl.p.jwpcdn.com/player/v/8.26.8/freewheel.js",
-                gapro: "//ssl.p.jwpcdn.com/player/v/8.26.8/gapro.js",
-                interactive: "//ssl.p.jwpcdn.com/player/v/8.26.8/interactive.js"
+                  "//cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.3/src/jwpsrv.js",
+                dai: "//cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.3/src/dai.js",
+                vast: "//cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.3/src/vast.js",
+                googima:
+                  "//cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.3/src/googima.js",
+                freewheel:
+                  "//cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.3/src/freewheel.js",
+                gapro:
+                  "//cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.3/src/gapro.js",
+                interactive:
+                  "//cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.3/src/interactive.js"
               }[e];
             return n ? t + n : "";
           },
@@ -5236,10 +5242,10 @@
               }
               n.bids && b(t, n.bids, "bidding");
             }
-            if (n("jwpsrv")) {
-              let n = e.analytics;
-              n !== Object(n) && (n = {}), b(t, n, "jwpsrv");
-            }
+            // if (n("jwpsrv")) {
+            //   let n = e.analytics;
+            //   n !== Object(n) && (n = {}), b(t, n, "jwpsrv");
+            // }
             return b(t, e.ga, "gapro"), b(t, e.interactive, "interactive"), t;
           },
           k = function (e, t) {

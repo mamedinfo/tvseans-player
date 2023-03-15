@@ -15,13 +15,14 @@
     <!-- <script src="./src/jwplayer.core.controls.js"></script> -->
     <!-- <script src="./src/jwpsrv.js"></script> -->
     <!-- <script src="./src/provider.hlsjs.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/gh/mamedinfo/tvseans-player@1.0.2/player.js"></script>
+    <script src="./player.js"></script>
 
     <script>
       var player = jwplayer("tVideo").setup({
         displaytitle: false,
         logo: { hide: true },
         autostart: false,
+        cast: {},
         file: "https://tvseans.az/az/hls/3196/0/index.m3u8",
         width: "500px",
         aspectratio: "16:9"
@@ -36,12 +37,10 @@
 
       seekBtn.addEventListener("click", function () {
         setTimeout(() => {
-          player.seek(500)
-          player.play()
+          player.seek(500);
+          player.play();
         }, 50);
       });
-
- 
     </script>
   </body>
 </html>
